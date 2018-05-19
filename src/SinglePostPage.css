@@ -1,0 +1,26 @@
+.Entry {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.EntryRowImage {
+    height: 100vh;
+    width: 40%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.SinglePostEntryImage {
+    height: 100%;
+    position: fixed;
+}
+
+@media (max-width: 991px) { 
+    .ListEntryRow {
+        height: auto;
+    }
+    .EntryRowImage {
+        min-height: 200px;
+    }
+ }

@@ -6,14 +6,16 @@ import './ListEntry.css';
 class ListEntry extends Component {
     render() {
         return <div>
-						<div className="ListEntryRowShadow" /> <Row className="ListEntryRow">
-						<Col xs="12" lg="6">
-							<div className="ListEntryRowImage EntryRowImage" style={{ backgroundImage: "url('http://via.placeholder.com/1000x1000/2eaaf2/ffffff')" }} />
-						</Col>
-						<Col xs="12" lg="6">
-							<EntryRowRight />
-						</Col>
-					</Row> </div>;
+						<div className="ListEntryRowShadow" />
+						<Row className="ListEntryRow">
+							<Col xs="12" lg="6">
+								<div className="ListEntryRowImage EntryRowImage" style={{ backgroundImage: "url('http://via.placeholder.com/1000x1000/2eaaf2/ffffff')" }} />
+							</Col>
+							<Col xs="12" lg="6">
+								<EntryRowRight />
+							</Col>
+						</Row>
+					</div>;
     }
 }
 

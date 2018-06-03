@@ -15,8 +15,8 @@ class Header extends Component {
     render() {
         return <div>
                     <Navbar color="light" light expand="md">
-                        <NavbarBrand href="/">reactstrap</NavbarBrand>
-                        <Nav className="ml-auto" navbar>
+                        <NavbarBrand href="/">IdeaType Demo</NavbarBrand>
+                        {/* <Nav className="ml-auto" navbar>
                             <NavItem>
                                 <NavLink href="/components/">Components</NavLink>
                             </NavItem>
@@ -36,7 +36,7 @@ class Header extends Component {
                                     <DropdownItem>Reset</DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledDropdown>
-                        </Nav>
+                        </Nav> */}
                     </Navbar>
                 </div>;
     }

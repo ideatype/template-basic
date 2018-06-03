@@ -10,10 +10,12 @@ import {
 	DropdownMenu,
 	DropdownItem
 } from "reactstrap";
+import "./Header.css";
+
 
 class Header extends Component {
     render() {
-        return <div>
+        return <div className="Header">
                     <Navbar color="light" light expand="md">
                         <NavbarBrand href="/">IdeaType Demo</NavbarBrand>
                         {/* <Nav className="ml-auto" navbar>

@@ -12,7 +12,7 @@ class ListEntry extends Component {
 								<div className="ListEntryRowImage EntryRowImage" style={{ backgroundImage: "url('http://via.placeholder.com/1000x1000/2eaaf2/ffffff')" }} />
 							</Col>
 							<Col xs="12" lg="6">
-								<EntryRowRight />
+					<EntryRowRight title={this.props.title} author={this.props.author} bodyPreview={this.props.bodyPreview}/>
 							</Col>
 						</Row>
 					</div>;

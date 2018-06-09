@@ -1,5 +1,6 @@
 .ListEntryRow {
     min-height: 200px;
+    max-height: 400px;
 }
 
 .ListEntryRowShadow {
@@ -22,6 +23,7 @@
 @media (max-width: 991px) { 
     .ListEntryRow {
         height: auto;
+        max-height: 650px;
     }
     .EntryRowImage {
         min-height: 200px;

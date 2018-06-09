@@ -4,11 +4,17 @@
 }
 
 .EntryImage {
-    /*height: 100vh;*/
+    height: 93.6vh;
     width: 40%;
     background-size: cover;
     background-position: center;
     z-index: -1;
+}
+
+.EntryRow {
+    min-height: 93.6vh;
+    width: 100%;
+    position: fixed;
 }
 
 .SinglePostEntryImage {

@@ -14,7 +14,7 @@ class SinglePostPage extends Component {
 									<div className="SinglePostEntryImage EntryRowImage sticky-top fixed-bottom" style={{ backgroundImage: "url('http://via.placeholder.com/1000x1000/2eaaf2/ffffff')" }} />
 								</Col>
 								<Col className="" xs="12" lg="7">
-									<SinglePostEntryRowRight />
+									<SinglePostEntryRowRight title="Fajny post" author="Maciej" body="tresc posta"/>
 								</Col>
 							</Row>
 						</div>

@@ -6,7 +6,7 @@ class EntryRowRight extends Component {
 	render() {
         return <div className="ListEntryRowRight EntryRowRight">
 						<h1 className="EntryRowRightTitle">
-				<Link to={`/post/1337`}>{this.props.title}</Link>
+				<Link to={'/post/' + this.props}>{this.props.title}</Link>
 						</h1>
 						<div className="EntryRowRightDetails">
 							<span className="EntryRowRightDetailsAuthorDesc">
@@ -16,8 +16,7 @@ class EntryRowRight extends Component {
 							</span>
 						</div>
 						<div className="EntryRowRightText">
-							<p>
-								{this.props.bodyPreview}
+							<p dangerouslySetInnerHTML={{__html: this.props.bodyPreview}}>
 							</p>
 						</div>
 					</div>;

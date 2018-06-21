@@ -6,7 +6,7 @@ class EntryRowRight extends Component {
 	render() {
         return <div className="ListEntryRowRight EntryRowRight">
 						<h1 className="EntryRowRightTitle">
-				<Link to={'/post/' + this.props}>{this.props.title}</Link>
+				<Link to={`/post/${this.props.postId}`}>{this.props.title}</Link>
 						</h1>
 						<div className="EntryRowRightDetails">
 							<span className="EntryRowRightDetailsAuthorDesc">

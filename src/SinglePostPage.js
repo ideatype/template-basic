@@ -14,7 +14,7 @@ class SinglePostPage extends Component {
 
 	componentDidMount() {
 		document.getElementById("root").classList.add("loading");
-		fetch(`http://127.0.0.1:8080/post/${this.props.match.params.postId}`)
+		fetch(`/api/post/${this.props.match.params.postId}`)
 			.then(results => {
 				return results.json();
 			}).then(data => {

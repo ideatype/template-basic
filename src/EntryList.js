@@ -13,7 +13,7 @@ class EntryList extends Component {
 
 	componentDidMount() {
 		document.getElementById("root").classList.add("loading");
-		fetch("http://127.0.0.1:8080/posts")
+		fetch("/api/posts")
 			.then(results => {
 				return results.json();
 			}).then(data => {

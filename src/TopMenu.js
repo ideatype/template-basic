@@ -11,22 +11,14 @@ import {
 import './TopMenu.css';
 
 class TopMenu extends Component {
-
-	constructor() {
-		super();
-		this.state = {
-			entries: [],
-		};
-	}
-
-	componentDidMount() {
+	render() {
 		let entries = this.props.entries.map((entry) => {
 			if (Array.isArray(entry.value)) {
 				return (
 					<UncontrolledDropdown nav inNavbar>
 						<DropdownToggle nav caret>
 							{entry.title}
-								</DropdownToggle>
+						</DropdownToggle>
 						<DropdownMenu right>
 							{entry.value.map((subentry) => {
 								return <DropdownItem><NavLink href={subentry.value}>{subentry.title}</NavLink></DropdownItem>
@@ -38,19 +30,13 @@ class TopMenu extends Component {
 				return (<NavItem>
 					<NavLink href={entry.value}>
 						{entry.title}
-								</NavLink>
+					</NavLink>
 				</NavItem>);
 			}
 		}
 		);
-		this.setState({
-			entries: entries
-		});
-	}
-
-	render() {
 		return <Nav className="ml-auto TopMenu" navbar>
-			{this.state.entries}
+			{entries}
 		</Nav>;
 	}
 }

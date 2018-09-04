@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import ListEntry from './ListEntry.js';
 import './EntryList.css';
+import LoadingManager from "./LoadingManager";
+import { API_ROOT } from "./ApiConf";
+
 
 class EntryList extends Component {
 
@@ -12,8 +15,8 @@ class EntryList extends Component {
 	}
 
 	componentDidMount() {
-		document.getElementById("root").classList.add("loading");
-		fetch("/api/posts")
+		LoadingManager.start("EntryList");
+		fetch(`${API_ROOT}/api/posts`)
 			.then(results => {
 				return results.json();
 			}).then(data => {
@@ -28,7 +31,7 @@ class EntryList extends Component {
 				this.setState({
 					posts: posts
 				});
-				document.getElementById("root").classList.remove("loading");
+				LoadingManager.finish("EntryList");
 		})
 	}
 

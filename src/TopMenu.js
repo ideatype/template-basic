@@ -8,6 +8,7 @@ import {
 	DropdownMenu,
 	DropdownItem
 } from "reactstrap";
+import { Link } from 'react-router-dom';
 import './TopMenu.css';
 
 class TopMenu extends Component {
@@ -21,14 +22,14 @@ class TopMenu extends Component {
 						</DropdownToggle>
 						<DropdownMenu right>
 							{entry.value.map((subentry) => {
-								return <DropdownItem><NavLink href={subentry.value}>{subentry.title}</NavLink></DropdownItem>
+								return <DropdownItem><NavLink tag={Link} to={subentry.value}>{subentry.title}</NavLink></DropdownItem>
 							})}
 						</DropdownMenu>
 					</UncontrolledDropdown>
 				)
 			} else {
 				return (<NavItem>
-					<NavLink href={entry.value}>
+					<NavLink tag={Link} to={entry.value}>
 						{entry.title}
 					</NavLink>
 				</NavItem>);

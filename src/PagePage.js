@@ -4,6 +4,7 @@ import { Row, Col, Container } from "reactstrap";
 import "./PagePage.css";
 import PageEntryContent from "./PageEntryContent";
 import LoadingManager from "./LoadingManager";
+import ConfigManager from "./ConfigManager";
 import { API_ROOT } from "./ApiConf";
 
 class PagePage extends Component {
@@ -31,7 +32,8 @@ class PagePage extends Component {
 					<Container>
 						<PageEntryContent title={data.page.meta.title} author={data.page.meta.author} body={data.page.content} />
 					</Container>
-					</Row>;
+				</Row>;
+				document.title = data.page.meta.title + " • " + ConfigManager.get().site.site_name;
 				this.setState({ page: page });
 				LoadingManager.finish("PagePage");
 			});

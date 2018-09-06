@@ -4,6 +4,7 @@ import { Row, Col } from "reactstrap";
 import "./SinglePostPage.css";
 import SinglePostEntryRowRight from "./SinglePostEntryRowRight";
 import LoadingManager from "./LoadingManager";
+import ConfigManager from "./ConfigManager";
 import { API_ROOT } from "./ApiConf";
 
 class SinglePostPage extends Component {
@@ -32,6 +33,7 @@ class SinglePostPage extends Component {
 							<SinglePostEntryRowRight title={data.post.meta.title} author={data.post.meta.author} body={data.post.content} />
 						</Col>
 					</Row>;
+				document.title = data.post.meta.title + " • " + ConfigManager.get().site.site_name;
 				this.setState({ post: post });
 				LoadingManager.finish("SinglePostPage");
 			});

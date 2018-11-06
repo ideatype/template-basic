@@ -4,6 +4,7 @@ import { Row, Col, Container } from "reactstrap";
 import "./PagePage.css";
 import PageEntryContent from "./PageEntryContent";
 import LoadingManager from "./LoadingManager";
+import LocaleManager from "./LocaleManager";
 import ConfigManager from "./ConfigManager";
 import { API_ROOT } from "./ApiConf";
 
@@ -17,7 +18,8 @@ class PagePage extends Component {
 
 	componentDidMount() {
 		LoadingManager.start("PagePage");
-		fetch(`${API_ROOT}/api/page/${this.props.match.params.pageId}`)
+		let langSuffix = LocaleManager.getAPILangSuffix();
+		fetch(`${API_ROOT}/api/page/${this.props.match.params.pageId}${langSuffix}`)
 			.then(results => {
 				return results.json();
 			})

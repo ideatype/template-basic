@@ -4,6 +4,7 @@ import { Row, Col } from "reactstrap";
 import "./SinglePostPage.css";
 import SinglePostEntryRowRight from "./SinglePostEntryRowRight";
 import LoadingManager from "./LoadingManager";
+import LocaleManager from "./LocaleManager";
 import ConfigManager from "./ConfigManager";
 import { API_ROOT } from "./ApiConf";
 
@@ -17,7 +18,8 @@ class SinglePostPage extends Component {
 
 	componentDidMount() {
 		LoadingManager.start("SinglePostPage");
-		fetch(`${API_ROOT}/api/post/${this.props.match.params.postId}`)
+		let langSuffix = LocaleManager.getAPILangSuffix();
+		fetch(`${API_ROOT}/api/post/${this.props.match.params.postId}${langSuffix}`)
 			.then(results => {
 				return results.json();
 			})

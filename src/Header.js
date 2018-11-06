@@ -10,7 +10,6 @@ import TopMenu from "./TopMenu.js";
 import { Link } from 'react-router-dom';
 import { API_ROOT } from "./ApiConf";
 
-
 class Header extends Component {
 
 	constructor() {
@@ -39,7 +38,6 @@ class Header extends Component {
 	}
 
 	render() {
-		console.log(this.state.topMenuEntries);
 		return (
 			<div className="Header">
 				<Navbar color="light" light expand="md">

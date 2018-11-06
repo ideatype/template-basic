@@ -10,7 +10,7 @@ class SinglePostEntryRowRight extends Component {
 				</h1>
 				<div className="EntryRowRightDetails">
 					<span className="EntryRowRightDetailsAuthorDesc">
-						Submitted by: <span className="EntryRowRightDetailsAuthorName">
+						<span className="EntryRowRightDetailsAuthorName">
 							{this.props.author}
 						</span>
 					</span>

@@ -29,7 +29,7 @@ export default class LocaleManager {
 		if (ConfigManager.get() !== undefined) {
 			return ConfigManager.get().site.languages.default;
 		}
-		return "en";
+		return "";
 	}
 
 	static getLocaleNameFromCode(code) {

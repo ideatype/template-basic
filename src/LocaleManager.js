@@ -7,7 +7,8 @@ export default class LocaleManager {
 
 	static getLocale() {
 		if (localStorage.getItem("it_locale") === undefined
-			|| localStorage.getItem("it_locale") === "") {
+			|| localStorage.getItem("it_locale") === ""
+			|| localStorage.getItem("it_locale") === null) {
 			this.setLocale(this.getDefaultLocale())
 		}
 		return localStorage.getItem("it_locale");
@@ -28,7 +29,7 @@ export default class LocaleManager {
 		if (ConfigManager.get() !== undefined) {
 			return ConfigManager.get().site.languages.default;
 		}
-		return "";
+		return "en";
 	}
 
 	static getLocaleNameFromCode(code) {
